@@ -1,0 +1,21 @@
+.menus {
+    display: grid;
+
+    &__background {
+        padding-top: 20px;
+        padding-bottom: 80px;
+        padding-left: 20px;
+        padding-right: 20px;
+        background-color: $color-light_gray;
+    }
+
+    &__image {
+        width: 100%;
+        z-index: 1;
+    }
+
+    &__order {
+        padding-top: 30px;
+        text-align: center;
+    }
+}

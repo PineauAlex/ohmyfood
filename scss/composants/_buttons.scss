@@ -1,0 +1,20 @@
+.buttons {
+    color: $color-white;
+    padding: 15px 20px;
+    background: $color-primary;
+    background: linear-gradient(160deg, $color-secondary 0%, $color-primary 100%);
+    border-radius: 30px;
+    box-shadow: 5px 13px 30px -17px black;
+    display: inline-flex;
+    opacity: 1;
+    transition: all 500ms ease-in;
+
+    &:hover {
+        opacity: 0.8;
+        box-shadow: 5px 13px 20px -10px $color-black;
+    }
+
+    &--large {
+        padding: 15px 50px;
+    }
+}

@@ -1,0 +1,54 @@
+.steps {
+
+    &__list {
+        padding: 0;
+        padding-left: 10px;
+    }
+    
+    &__number {
+        counter-increment: step;
+        list-style: none;
+        border-radius: 20px;
+        padding: 25px 0;
+        margin: 25px 0;
+        padding-left: 30px;
+        background-color: $color-light_gray;
+        box-shadow: 0px 5px 15px -12px black;;
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        row-gap: 20px;
+
+        &::before {
+            content: counter(step);
+            position: absolute;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background-color: $color-primary;
+            font-size: 14px;
+            border-radius: 50%;
+            padding: 8px;
+            width: 10px;
+            height: 10px;
+            left: -10px;
+            color: $color-white;
+        }
+
+        i {
+            padding-left: 10px;
+            padding-right: 40px;
+            width: 30px;
+            color: $color-dark;
+            text-align: center;
+        }
+
+        &--purple {
+            background-color: rgba($color-primary, 0.1);
+
+            i {
+                color: $color-primary;
+            }
+        }
+    }
+}
