@@ -37,6 +37,7 @@
             color: transparent;
             background: linear-gradient(160deg, $color-secondary 0%, $color-primary 100%);
             background-clip: text;
+            -webkit-background-clip: text;
         }
 
         &:hover {
