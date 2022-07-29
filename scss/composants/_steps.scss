@@ -3,6 +3,12 @@
     &__list {
         padding: 0;
         padding-left: 10px;
+
+        /*
+        @media (min-width: 992px) {
+            width: 30%;
+        }
+        */
     }
     
     &__number {
@@ -19,6 +25,10 @@
         flex-direction: row;
         row-gap: 20px;
 
+        @media (min-width: 992px) {
+            flex-wrap: nowrap;
+        }
+
         &::before {
             content: counter(step);
             position: absolute;
@@ -33,6 +43,13 @@
             height: 10px;
             left: -10px;
             color: $color-white;
+
+            /*
+            @media (min-width: 992px) {
+                left: 45%;
+                bottom: 50px;
+            }
+            */
         }
 
         i {
@@ -41,6 +58,12 @@
             width: 30px;
             color: $color-dark;
             text-align: center;
+
+            /*
+            @media (min-width: 992px) {
+                font-size: 30px;
+            }
+            */
         }
 
         &--purple {

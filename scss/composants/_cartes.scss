@@ -4,9 +4,13 @@
     margin-top: -50px;
     z-index: 2;
     max-width: 100%;
-
+    
     h1 {
         font-size: 30px;
+
+        @media (min-width: 768px) {
+            text-align: center;
+        }
     }
 
 
@@ -59,22 +63,27 @@
         width: 40px;
         border-top: 3px solid $color-tertiary;
     }
-
-
+    
     
     &__choice {
         background-color: $color-white;
         box-shadow: 1px 6px 22px -20px $color-black;
         border-radius: 20px;
-        margin: 20px 0;
+        padding: 15px 0 15px 15px;
+        margin: 15px 0;
+        max-width: 100%;
         display: flex;
         overflow: hidden;
         cursor: pointer;
         animation: choices-appears 1s ease-out 1 both;
-        @for $i from 1 through 9 {
+        @for $i from 1 through 10 {
             &--#{$i} {
                 animation-delay: 0.3s + (0.2s * $i);
             }
+        }
+
+        @media (min-width: 992px) {
+            width: 100%;
         }
 
         h3 {
@@ -83,31 +92,35 @@
     }
 
     &__text {
-        width: 100%;
-        padding: 12px;
-    }
-
-    &__info {
-        display: flex;
-        justify-content: space-between;
-    }
-
-    &__meal {
-        overflow: hidden;
         white-space: nowrap;
         text-overflow: ellipsis;
+        overflow: hidden;
+        flex: 1;
+
+        h3, p {
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+        }
     }
 
     &__price {
-        margin-right: 5px;
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-end;
+        padding-left: 10px;
         font-weight: bold;
     }
 
     &__select {
-        width: auto;
-        margin-right: -75px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 70px;
+        margin: -15px -75px -15px 0;
         transition: margin-right 0.5s ease-in-out;
         padding: 20px;
+        margin-left: 20px;
         background-color: $color-tertiary;
 
         i {
@@ -118,6 +131,7 @@
 
     &__choice:hover > &__select {
         margin-right: 0px;
+        padding: 0px;
         transition: margin-right 0.5s ease-in-out;
         
         & > i {

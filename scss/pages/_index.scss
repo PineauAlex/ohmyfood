@@ -1,10 +1,11 @@
 .index {
     
     &__background {
-        padding-top: 20px;
-        padding-bottom: 40px;
-        padding-left: 5%;
-        padding-right: 5%;
+        padding: 20px 5% 40px 5%;
+        
+        @media (min-width: 992px) {
+            padding: 20px 10% 40px 10%;
+        }
         
         &--lightgray {
             background-color: $color-light_gray;
@@ -35,7 +36,7 @@
         }
     }
 
-    @media (min-width: 992px) {
+    @media (min-width: 768px) {
         &__restaurants {
             display: flex;
             justify-content: space-between;
